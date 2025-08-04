@@ -1,0 +1,83 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Only apply scroll snap to homepage */
+.home-page {
+  scroll-snap-type: y mandatory;
+}
+
+/* Only apply full height sections to homepage */
+.home-page section {
+  height: 100vh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Default section styles for other pages */
+section {
+  position: relative;
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.parallax-element {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(40px);
+  transition: transform 0.2s ease-out;
+  pointer-events: none;
+}
